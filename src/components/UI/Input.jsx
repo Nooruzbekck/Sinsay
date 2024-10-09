@@ -9,8 +9,7 @@ const Input = ({ value, onChange, placeholder, type = 'text', ...props }) => {
       onChange={onChange}
       placeholder={placeholder}
       {...props} 
-     
-    ></StyledInput>
+    />
   );
 };
 
@@ -21,4 +20,11 @@ height: 80px;
 border: 1px solid #000000;
 padding-left: 20px;
 font-size: 30px;
+font-weight: 400;
+color: #171717;
+&:placeholder{
+font-size: 16px;
+font-weight: 400;
+color: #171717;
+}
 `
