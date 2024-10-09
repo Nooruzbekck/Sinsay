@@ -1,3 +1,7 @@
+import Input from "./components/UI/Input";
+
 export function App() {
-  return <div></div>;
+  return <div> 
+    <Input/>
+  </div>;
 }
