@@ -1,4 +1,5 @@
 
 export function App() {
-  return <div></div>;
+  return <div>
+  </div>;
 }
