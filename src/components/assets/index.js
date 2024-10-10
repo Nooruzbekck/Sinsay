@@ -8,7 +8,7 @@ import Search from "../assets/icon/search.svg?react";
 import People from "../assets/icon/people.svg?react";
 import Bag from "../assets/icon/bag.svg?react";
 
-export const Icons = {
+ export const Icons = {
   Korzina,
   Burgermenu,
   Instagram,
