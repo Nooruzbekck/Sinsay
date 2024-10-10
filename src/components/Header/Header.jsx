@@ -4,8 +4,7 @@ import styled from 'styled-components'
 
 const Header = () => {
   return (
-    <div>
-      <ParentDiv>
+      <StyleHeader>
        <img src={Icons.Burgermenu} alt="" />
        <h2>SINSAY</h2>
        <ChildDiv>
@@ -14,21 +13,22 @@ const Header = () => {
        <img src={Icons.Heart} alt="Heart" />
        <img src={Icons.Bag} alt="Korzina" />
        </ChildDiv>
-      </ParentDiv>
-      <hr />
-    </div>
+      </StyleHeader>
   )
 }
 
 export default Header
-const ParentDiv = styled.div`
+const StyleHeader = styled.header`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  border-bottom: 2px solid black;
+  padding-left: 40px ;
+  padding-right: 100px;
 `;
 const ChildDiv = styled.div`
+display: flex;
+padding-top: 13px;
 width: 80px;
 height: 30px;
-display: flex;
-margin: 15px ;
 gap: 15px;
 `;
