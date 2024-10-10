@@ -2,39 +2,46 @@ import React from "react";
 import styled from "styled-components";
 import { Input } from "./UI/Input";
 import { Icons } from "../assets/index";
-import { Button } from "@mui/material";
+import { Button } from "./UI/Button";
 
 export const Footer = () => {
   return (
     <StyledDiv>
       <StyledContact>
-        <StyledA href=""> Contact Us</StyledA>
-        <StyledN href="">+7784568930283</StyledN>
-        <StyledS href="">Sinseybeaut@gmail.com</StyledS>
-        <StyledM href="">Monday-Friday 10:00 am to 17:00 pm</StyledM>
-
+        <StyledA href="#"> Contact Us</StyledA>
+        <StyledDivs>
+          <StyledN href="#">+7784568930283</StyledN>
+          <StyledS href="#">Sinseybeaut@gmail.com</StyledS>
+          <StyledM href="#">
+            Monday-Friday <br />
+            10:00 am to 17:00 pm
+          </StyledM>
+        </StyledDivs>
         <StyledDIV>
           <Icons.Twitter />
           <Icons.Facebook />
           <Icons.Instagram />
         </StyledDIV>
-        <StyledOffical href="">
+        <StyledOffical href="#">
           © 2023 SINSEY Official. Powered by Shopify
         </StyledOffical>
       </StyledContact>
 
       <StyledComent>
-        <StyledB href="">Shop</StyledB>
-        <StyledO href="">About</StyledO>
-        <StyledC href="">Product</StyledC>
-        <StyledX href="">Reviews</StyledX>
-        <StyledL href="">Contact</StyledL>
+        <StyledB href="#">Shop</StyledB>
+        <StyledWrapper>
+          <StyledO href="#">About</StyledO>
+          <StyledC href="#">Product</StyledC>
+          <StyledX href="#">Reviews</StyledX>
+          <StyledL href="#">Contact</StyledL>
+        </StyledWrapper>
       </StyledComent>
       <StyledNewsletter>
-        <StyledZ href="">Newsletter</StyledZ>
+        <StyledZ href="#">Newsletter</StyledZ>
         <StyledComents>
-          <StyledNav href="">
-            Sign up for exclusive offers ,original stories,events and more
+          <StyledNav href="#">
+            Sign up for exclusive offers ,original
+            <br /> stories,events and more
           </StyledNav>
 
           <StyledInput placeholder="Enter email" />
@@ -63,6 +70,16 @@ const StyledOffical = styled.a`
   color: #676869;
   padding-top: 30px;
 `;
+const StyledDivs = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+`;
+const StyledWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+`;
 const StyledComents = styled.div`
   display: flex;
   flex-direction: column;
@@ -71,14 +88,15 @@ const StyledComents = styled.div`
 const StyledContact = styled.nav`
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 30px;
 `;
 const StyledDIV = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  padding-top: 20px;
+  gap: 31px;
 `;
-const StyledInput = styled.input`
+const StyledInput = styled(Input)`
   width: 310px;
   height: 48.19px;
   max-width: 310px;
@@ -92,7 +110,7 @@ const StyledInput = styled.input`
   border: none;
 `;
 
-const StyledButton = styled.button`
+const StyledButton = styled(Button)`
   width: 130px;
   height: 49px;
   border: 1px;
@@ -103,7 +121,7 @@ const StyledButton = styled.button`
 const StyledNewsletter = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
 `;
 const StyledA = styled.a`
   font-weight: 400;
@@ -115,7 +133,7 @@ const StyledA = styled.a`
 const StyledComent = styled.nav`
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 30px;
 `;
 const StyledB = styled.a`
   font-weight: 400;
@@ -150,7 +168,6 @@ const StyledS = styled.a`
   color: #000000;
 `;
 const StyledM = styled.a`
-  width: 166px;
   font-weight: 400;
   font-size: 16px;
   line-height: 19.2px;
@@ -187,7 +204,6 @@ const StyledL = styled.a`
   color: #000000;
 `;
 const StyledNav = styled.a`
-  width: 280px;
   font-weight: 400;
   font-size: 16px;
   line-height: 19.2px;
