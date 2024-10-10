@@ -13,6 +13,7 @@ export const ProductsList = ({ products }) => {
 };
 const StyledContainer = styled.ul`
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 117px 20px;
   padding: 100px;
