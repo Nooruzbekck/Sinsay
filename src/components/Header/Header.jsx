@@ -1,11 +1,10 @@
 import React from 'react'
-import Icons from "../assets/index.js";
+import Icons from "../assets/index";
 
 const Header = () => {
   return (
     <div>
-      <img src={Icons.Korzina} alt="" />
-      <h1>fghjkl</h1>
+      <Icons.Burgermenu />
     </div>
   )
 }
