@@ -5,7 +5,7 @@ import styled from "styled-components";
 const Header = () => {
   return (
     <StyleHeader>
-      <img src={Icons.Burgermenu} alt="" />
+      <img src={Icons.Burgermenu} alt="Burger" />
       <h2>SINSAY</h2>
       <ChildDiv>
         <img src={Icons.Search} alt="Search" />
