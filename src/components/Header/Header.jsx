@@ -1,17 +1,21 @@
 import React from "react";
-import { Icons } from "../assets/index";
 import styled from "styled-components";
-
+import { Icons } from "../assets";
 const Header = () => {
   return (
+
     <StyleHeader>
-      <img src={Icons.Burgermenu} alt="Burger" />
-      <h2>SINSAY</h2>
+      <BurgerDiv>
+      <Icons.Burgermenu  />
+      </BurgerDiv>
+      <StyleText>SINSAY</StyleText>
       <ChildDiv>
-        <img src={Icons.Search} alt="Search" />
-        <img src={Icons.People} alt="People" />
-        <img src={Icons.Heart} alt="Heart" />
-        <img src={Icons.Bag} alt="Korzina" />
+      <Icons.Search />
+        <StylePeople>
+        <Icons.People />
+        </StylePeople>
+        <Icons.Heart />
+        <Icons.Bag />
       </ChildDiv>
     </StyleHeader>
   );
@@ -21,14 +25,22 @@ export default Header;
 const StyleHeader = styled.header`
   display: flex;
   justify-content: space-between;
-  border-bottom: 2px solid black;
   padding-left: 40px;
   padding-right: 100px;
+  border-bottom: 2px solid black;
 `;
+const BurgerDiv = styled.div`
+padding-top: 20px;
+`;
+const StyleText = styled.h2`
+padding-top: 9px;
+`;
+const StylePeople = styled.div`
+  padding-top: 4px;
+`
 const ChildDiv = styled.div`
   display: flex;
-  padding-top: 13px;
-  width: 80px;
+  padding-top: 20px;
   height: 30px;
-  gap: 15px;
+  gap: 60px;
 `;
