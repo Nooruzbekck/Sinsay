@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const ProductsItem = ({ image, title, price, id, onAddToCart }) => {
   return (
     <StyledCard>
-      <Styledimage src={image} title={title} />
+      <Styledimage src={image} alt={title} />
       <p>{title}</p>
       <StyledSvgDiv>
         <b>${price}</b>
