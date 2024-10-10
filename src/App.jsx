@@ -1,3 +1,7 @@
+import Banner from "./components/Banner";
+
 export function App() {
-  return <div></div>;
+  return <div>
+    <Banner />
+  </div>;
 }
