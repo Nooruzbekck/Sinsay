@@ -8,15 +8,10 @@ export const Footer = () => {
     <StyledDiv>
       <StyledContact>
         <StyledA href=""> Contact Us</StyledA>
-        <br />
         <StyledN href="">+7784568930283</StyledN>
-        <br />
         <StyledS href="">Sinseybeaut@gmail.com</StyledS>
-        <br />
-        <br />
         <StyledM href="">Monday-Friday 10:00 am to 17:00 pm</StyledM>
 
-        <br />
         <StyledDIV>
           <Icons.Twitter />
           <Icons.Facebook />
@@ -29,27 +24,20 @@ export const Footer = () => {
 
       <StyledComent>
         <StyledB href="">Shop</StyledB>
-        <br />
         <StyledO href="">About</StyledO>
-        <br />
         <StyledC href="">Product</StyledC>
-        <br />
         <StyledX href="">Reviews</StyledX>
-        <br />
         <StyledL href="">Contact</StyledL>
       </StyledComent>
       <StyledNewsletter>
         <StyledZ href="">Newsletter</StyledZ>
-        <br />
-<StyledComents>
-        <StyledNav href="">
-          Sign up for exclusive offers ,original stories,events and more
-        </StyledNav>
+        <StyledComents>
+          <StyledNav href="">
+            Sign up for exclusive offers ,original stories,events and more
+          </StyledNav>
 
-        <br />
-        <StyledInput placeholder="Enter email" />
-        <br />
-        <StyledButton>Subscribe</StyledButton>
+          <StyledInput placeholder="Enter email" />
+          <StyledButton>Subscribe</StyledButton>
         </StyledComents>
       </StyledNewsletter>
     </StyledDiv>
@@ -72,22 +60,22 @@ const StyledOffical = styled.a`
   font-size: 14px;
   line-height: 19.6px;
   color: #676869;
-  padding-top:30px;
+  padding-top: 30px;
 `;
-const StyledComents=styled.div`
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-`
+const StyledComents = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+`;
 const StyledContact = styled.nav`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
 `;
 const StyledDIV = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 `;
 const StyledInput = styled.input`
   width: 310px;
@@ -126,7 +114,7 @@ const StyledA = styled.a`
 const StyledComent = styled.nav`
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 15px;
 `;
 const StyledB = styled.a`
   font-weight: 400;
