@@ -18,5 +18,7 @@ import styled from 'styled-components';
   height: 49px;
   background-color: #000000;
   color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
 
  `
