@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Input } from "./UI/Input";
 import { Icons } from "../assets/index";
+import { Button } from "@mui/material";
 
 export const Footer = () => {
   return (
