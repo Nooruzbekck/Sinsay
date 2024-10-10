@@ -2,7 +2,7 @@ import Korzina from "../assets/icon/korzina.svg?react";
 import Burgermenu from "../assets/icon/burgerMenu.svg?react";
 import Instagram from "../assets/icon/instagram.svg?react";
 import Twitter from "../assets/icon/twitter.svg?react";
-import Facebook from "../assets/icon/bag.svg?react";
+import Facebook from "../assets/icon/facebook.svg?react";
 import Heart from "../assets/icon/heart.svg?react";
 import Search from "../assets/icon/search.svg?react";
 import People from "../assets/icon/people.svg?react";
