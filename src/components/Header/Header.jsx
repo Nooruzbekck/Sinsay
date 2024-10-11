@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { Icons } from "../assets";
 const Header = () => {
   return (
-
     <StyleHeader>
       <BurgerDiv>
       <Icons.Burgermenu  />
