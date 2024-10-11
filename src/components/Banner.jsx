@@ -1,9 +1,7 @@
-
-
 import React, { useState, useEffect } from "react";
 import Restor1 from "../icons/Restor.png";
-import Restor2 from "../assets/crem1.webp";
-import Restor3 from "../assets/crem.avif";
+import Restor2 from "../assets/slaider1.png";
+import Restor3 from "../assets/slaider2.png";
 import styled from "styled-components";
 
 const Banner = () => {
@@ -35,7 +33,7 @@ const DivStyle = styled.div`
 
 const BannerStyle = styled.img`
   width: 100%;
-  height: 100vh;
+  height: 845px;
 `;
 const TextStyle = styled.h2`
   font-family: Montserrat;
