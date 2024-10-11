@@ -6,16 +6,16 @@ import { Button } from "./UI/Button";
 
 export const Footer = () => {
   return (
-    <StyledDiv>
-      <StyledContact>
-        <StyledA href="#"> Contact Us</StyledA>
+    <StyledFooter>
+      <StyledNewsletter>
+        <StyledLink href="#"> Contact Us</StyledLink>
         <StyledDivs>
-          <StyledN href="#">+7784568930283</StyledN>
-          <StyledS href="#">Sinseybeaut@gmail.com</StyledS>
-          <StyledM href="#">
+          <StyledLink href="#">+7784568930283</StyledLink>
+          <StyledLink href="#">Sinseybeaut@gmail.com</StyledLink>
+          <StyledLink href="#">
             Monday-Friday <br />
             10:00 am to 17:00 pm
-          </StyledM>
+          </StyledLink>
         </StyledDivs>
         <StyledDIV>
           <Icons.Twitter />
@@ -25,42 +25,39 @@ export const Footer = () => {
         <StyledOffical href="#">
           © 2023 SINSEY Official. Powered by Shopify
         </StyledOffical>
-      </StyledContact>
-
-      <StyledComent>
-        <StyledB href="#">Shop</StyledB>
-        <StyledWrapper>
-          <StyledO href="#">About</StyledO>
-          <StyledC href="#">Product</StyledC>
-          <StyledX href="#">Reviews</StyledX>
-          <StyledL href="#">Contact</StyledL>
-        </StyledWrapper>
-      </StyledComent>
+      </StyledNewsletter>
       <StyledNewsletter>
-        <StyledZ href="#">Newsletter</StyledZ>
-        <StyledComents>
+        <StyledLink href="#">Shop</StyledLink>
+        <StyledDivs>
+          <StyledLink href="#">About</StyledLink>
+          <StyledLink href="#">Product</StyledLink>
+          <StyledLink href="#">Reviews</StyledLink>
+          <StyledLink href="#">Contact</StyledLink>
+        </StyledDivs>
+      </StyledNewsletter>
+      <StyledNewsletter>
+        <StyledLink href="#">Newsletter</StyledLink>
+        <StyledDivs>
           <StyledNav href="#">
             Sign up for exclusive offers ,original
-            <br /> stories,events and more
+            <br /> stories,events and more.
           </StyledNav>
-
           <StyledInput placeholder="Enter email" />
           <StyledButton>Subscribe</StyledButton>
-        </StyledComents>
+        </StyledDivs>
       </StyledNewsletter>
-    </StyledDiv>
+    </StyledFooter>
   );
 };
 
 export default Footer;
 
-const StyledDiv = styled.div`
+const StyledFooter = styled.footer`
   width: 1, 280px;
   height: 360;
   padding: 47px 92px 48px 92px;
   background-color: #cfc9cb;
   display: flex;
-  /* align-items:center; */
   justify-content: space-around;
 `;
 const StyledOffical = styled.a`
@@ -75,21 +72,7 @@ const StyledDivs = styled.div`
   flex-direction: column;
   gap: 20px;
 `;
-const StyledWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-`;
-const StyledComents = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-`;
-const StyledContact = styled.nav`
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-`;
+
 const StyledDIV = styled.div`
   display: flex;
   align-items: center;
@@ -114,95 +97,24 @@ const StyledButton = styled(Button)`
   width: 130px;
   height: 49px;
   border: 1px;
+  border: none;
   background-color: #000000;
   color: white;
-  cursor: pointer;
 `;
 const StyledNewsletter = styled.div`
   display: flex;
   flex-direction: column;
   gap: 30px;
 `;
-const StyledA = styled.a`
+
+const StyledLink = styled.a`
   font-weight: 400;
   font-size: 21px;
   line-height: 25.2px;
-  align-items: center;
-  color: #000000;
-`;
-const StyledComent = styled.nav`
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-`;
-const StyledB = styled.a`
-  font-weight: 400;
-  font-size: 21px;
-  line-height: 25.2px;
-  align-items: center;
-  color: #000000;
-`;
-const StyledZ = styled.a`
-  font-weight: 400;
-  font-size: 21px;
-  line-height: 25.2px;
-  align-items: center;
-  color: #000000;
-`;
-const StyledN = styled.a`
-  width: 148px;
-  height: 19;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19.2px;
-  align-items: center;
-  color: #000000;
-`;
-const StyledS = styled.a`
-  width: 148px;
-  height: 19;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19.2px;
-  align-items: center;
-  color: #000000;
-`;
-const StyledM = styled.a`
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19.2px;
   align-items: center;
   color: #000000;
 `;
 
-const StyledO = styled.a`
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19.2px;
-  align-items: center;
-  color: #000000;
-`;
-const StyledC = styled.a`
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19.2px;
-  align-items: center;
-  color: #000000;
-`;
-const StyledX = styled.a`
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19.2px;
-  align-items: center;
-  color: #000000;
-`;
-const StyledL = styled.a`
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19.2px;
-  align-items: center;
-  color: #000000;
-`;
 const StyledNav = styled.a`
   font-weight: 400;
   font-size: 16px;
