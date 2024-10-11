@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Restor1 from "../icons/Restor.png";
-import Restor2 from "../assets/slaider1.png";
-import Restor3 from "../assets/slaider2.png";
+import Restor2 from "../assets/slaider.png";
+import Restor3 from "../assets/slaider3.png";
 import styled from "styled-components";
 
 const Banner = () => {
@@ -34,6 +34,11 @@ const DivStyle = styled.div`
 const BannerStyle = styled.img`
   width: 100%;
   height: 845px;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  z-index: 1; 
+  background-attachment: fixed;
+  
 `;
 const TextStyle = styled.h2`
   font-family: Montserrat;
