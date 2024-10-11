@@ -50,8 +50,6 @@ export const Footer = () => {
   );
 };
 
-export default Footer;
-
 const StyledFooter = styled.footer`
   width: 1, 280px;
   height: 360;
