@@ -46,7 +46,7 @@ export const Login = () => {
 
     localStorage.setItem("userData", JSON.stringify(formData));
     setIsLoggedIn(true);
-    setError(""); // Сброс ошибок
+    setError(""); 
   };
 
   return (
