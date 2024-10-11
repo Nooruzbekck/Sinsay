@@ -13,11 +13,10 @@ const Banner = () => {
 export default Banner;
 const DivStyle = styled.div`
   margin: 10px;
-  height: 100%;
 `;
 const BannerStyle = styled.img`
   width: 100%;
-  height: 20%;
+  height: 100vh;
 `;
 const TextStyle = styled.h2`
   font-family: Montserrat;
@@ -27,7 +26,7 @@ const TextStyle = styled.h2`
   align-items: center;
   color: #000000;
   position: relative;
-  bottom: 350px;
+  bottom: 280px;
   left: 100px;
   width: 45vh;
   height: 0%;
