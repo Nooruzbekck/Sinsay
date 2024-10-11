@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 export const ProductsItem = ({ image, title, price, id, onAddToCart }) => {
+  const [state, setState] = useState();
   return (
     <StyledCard>
       <Styledimage src={image} alt={title} />

@@ -1,3 +1,9 @@
+import { ProductsList } from "./components/UI/ProductsList";
+
 export function App() {
-  return <div></div>;
+  return (
+    <div>
+      <ProductsList/>
+    </div>
+  );
 }

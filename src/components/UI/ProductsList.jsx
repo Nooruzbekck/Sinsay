@@ -1,5 +1,3 @@
-import React from "react";
-import { ProductsItem } from "./ProductsItem";
 import styled from "styled-components";
 
 export const ProductsList = ({ products }) => {
