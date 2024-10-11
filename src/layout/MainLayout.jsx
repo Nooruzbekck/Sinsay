@@ -1,10 +1,10 @@
 import { useContext } from "react";
-import { AuthContext } from "./context/LoginContext";
+import { AuthContext } from "../components/context/LoginContext";
 import { PRODUCTS } from "../utils/constants/products";
-import { ProductsList } from "./UI/ProductsList";
-import { Login } from "./auth/Login";
+import { ProductsList } from "../components/UI/ProductsList";
+import { Login } from "../components/auth/Login";
 
-export const LoginProducts = () => {
+export const MainLayout = () => {
   const { isLoggedIn } = useContext(AuthContext);
 
   return (
