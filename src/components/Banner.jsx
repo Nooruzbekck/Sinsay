@@ -37,7 +37,6 @@ const BannerStyle = styled.img`
   width: 100%;
   height: 100vh;
 `;
-
 const TextStyle = styled.h2`
   font-family: Montserrat;
   font-size: 61px;
