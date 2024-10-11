@@ -1,11 +1,11 @@
-import Banner from "./components/Banner";
+
+import { AddFeature } from "./components/AddFeature";
 import { MainLayout } from "./layout/MainLayout";
 
 export function App() {
   return (
     <div>
-    <Banner/>
-    <h1>Face care</h1>
+   <AddFeature/>
       <MainLayout />
     </div>
   );
