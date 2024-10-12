@@ -7,8 +7,8 @@ import Heart from "../assets/icon/heart.svg?react";
 import Search from "../assets/icon/search.svg?react";
 import People from "../assets/icon/people.svg?react";
 import Bag from "../assets/icon/bag.svg?react";
-
- export const Icons = {
+import BlackHeart from "../assets/icon/black.svg?react";
+export const Icons = {
   Korzina,
   Burgermenu,
   Instagram,
@@ -18,4 +18,5 @@ import Bag from "../assets/icon/bag.svg?react";
   Search,
   People,
   Bag,
+  BlackHeart,
 };

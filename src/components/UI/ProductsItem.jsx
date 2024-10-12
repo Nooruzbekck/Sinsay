@@ -1,19 +1,42 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { Icons } from "../../assets";
+export const ProductsItem = ({
+  image,
+  title,
+  price,
+  id,
+  onAddToCart,
+  favorite,
+}) => {
+  const [state, setState] = useState(favorite);
 
-export const ProductsItem = ({ image, title, price, id, onAddToCart }) => {
-  const [state, setState] = useState();
+  const addToHandler = () => {
+    setState(!state);
+  };
   return (
-    <StyledCard>
-      <Styledimage src={image} alt={title} />
-      <p>{title}</p>
-      <StyledSvgDiv>
-        <b>${price}</b>
-        <img src="" />
-      </StyledSvgDiv>
+    <>
+      <StyledCard>
+        <Styledimage src={image} alt={title} />
+        <p>{title} </p>
+        <StyledSvgDiv>
+          <b>${price}</b>
 
-      <button onClick={() => onAddToCart(id)}>Add to cart</button>
-    </StyledCard>
+          {state ? (
+            <Icons.BlackHeart onClick={addToHandler} />
+          ) : (
+            <Icons.Heart onClick={addToHandler} />
+          )}
+        </StyledSvgDiv>
+        <button onClick={() => onAddToCart(id)}>Add to cart</button>
+        {state && (
+          <StyledDelete>
+            <Icons.Korzina />
+            delete
+          </StyledDelete>
+        )}
+      </StyledCard>
+    </>
   );
 };
 
@@ -24,7 +47,7 @@ const Styledimage = styled.img`
 `;
 const StyledCard = styled.li`
   width: 304px;
-  height: 460px;
+  height: 500px;
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -54,4 +77,11 @@ const StyledSvgDiv = styled.div`
     line-height: 18.6px;
     font-weight: 600;
   }
+`;
+const StyledDelete = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: black;
 `;
