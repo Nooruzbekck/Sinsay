@@ -1,8 +1,8 @@
 import React from "react";
-import { ProductsItem } from "./ProductsItem";
+import  ProductsItem  from "./ProductsItem";
 import styled from "styled-components";
 
-export const ProductsList = ({ products }) => {
+export const ProductsList = ({ products}) => {
   return (
     <StyledContainer>
       {products.map((card) => (
@@ -18,3 +18,4 @@ const StyledContainer = styled.ul`
   gap: 117px 20px;
   padding: 100px;
 `;
+
