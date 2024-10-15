@@ -3,12 +3,12 @@ import React, { createContext, useState, useEffect, useContext } from "react";
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState('sign-in');
 
   useEffect(() => {
     const savedUserData = JSON.parse(localStorage.getItem("userData")) || {};
     if (savedUserData?.email && savedUserData?.password) {
-      setIsLoggedIn(true);
+      setIsLoggedIn('/');
     }
   }, []);
 

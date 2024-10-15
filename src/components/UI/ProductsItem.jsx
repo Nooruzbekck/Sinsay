@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { Icons } from "../../assets";
+import { Button } from "./Button";
 export const ProductsItem = ({
   image,
   title,
@@ -8,7 +9,10 @@ export const ProductsItem = ({
   id,
   onAddToCart,
   favorite,
+  favoritePath,
+  AddToFaverit,
 }) => {
+
   return (
     <>
  
@@ -18,15 +22,29 @@ export const ProductsItem = ({
         <StyledSvgDiv>
           <b>${price}</b>
 
-          {favorite === "favorite" ? (
-            <Icons.BlackHeart onClick={() => onAddToCart(id)} />
+          {favorite ? (
+            <Icons.BlackHeart
+              onClick={() => {
+                AddToFaverit(id);
+              }}
+            />
           ) : (
-            <Icons.Heart onClick={() => onAddToCart(id)} />
+            <Icons.Heart
+              onClick={() => {
+                AddToFaverit(id);
+              }}
+            />
           )}
         </StyledSvgDiv>
-        <button onClick={() => onAddToCart(id)}>Add to cart</button>
-        {favorite === "favorite" && (
-          <StyledDelete>
+        <Button
+          onClick={() => {
+            onAddToCart({ id, title, image, price, favorite });
+          }}
+        >
+          Add to cart
+        </Button>
+        {favoritePath === "favorite" && (
+          <StyledDelete onClick={()=> AddToFaverit(id)}>
             <Icons.Korzina />
             delete
           </StyledDelete>

@@ -1,9 +1,9 @@
-import { CartList } from "./components/carts/CartList";
+import { MainLayout } from "./layout/MainLayout";
 
-export const App = () => {
+export function App() {
   return (
     <div>
-      <CartList />
+      <MainLayout />
     </div>
   );
-};
+}

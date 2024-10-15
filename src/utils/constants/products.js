@@ -96,4 +96,36 @@ export const PRODUCTS = [
     price: "19.50",
     favorite: false,
   },
+  {
+    id: "e13",
+    image:
+      "https://s3-alpha-sig.figma.com/img/994f/4f91/ff45c2c6e20dd17b2c943de1b62f9a3b?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=HVFdcWbSb4VU4zgJ2EVADo6v2ExXNHiSu35RNGLQ8d9RRK6ZiM8OwJaWCKpkHBY~LvlnwA2gwfiSIojLVi73d2m2ggj6fcIf9299BDNXu925dTAPerlgKsvj22m24Eq4IgH16jcqkMjVtKHb3sH0opL15DcDN~8jR2AvnUBOfztiq9-YkSskIdV5ZYv2QOSHSaFUJjt2PlulCsTA-P9SuTmCKUYy8phIkCnVSzF8TOjQZ-Ljr~Dr4Pr0t2Ixci8VkqjkxjdA0LtN7lXIFEbx0GyalBGO~QjoH1oO2NIcC9yBtl-0N81AkYBD~7yB2DKH0tj88GWXf-wGI56b1c5NBw__",
+    title: "PURITO Centella Unscented Recovery Cream 50 ml / 1.7 fl. oz.",
+    price: "19.50",
+    favorite: false,
+  },
+  {
+    id: "e14",
+    image:
+      " https://s3-alpha-sig.figma.com/img/994f/4f91/ff45c2c6e20dd17b2c943de1b62f9a3b?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=HVFdcWbSb4VU4zgJ2EVADo6v2ExXNHiSu35RNGLQ8d9RRK6ZiM8OwJaWCKpkHBY~LvlnwA2gwfiSIojLVi73d2m2ggj6fcIf9299BDNXu925dTAPerlgKsvj22m24Eq4IgH16jcqkMjVtKHb3sH0opL15DcDN~8jR2AvnUBOfztiq9-YkSskIdV5ZYv2QOSHSaFUJjt2PlulCsTA-P9SuTmCKUYy8phIkCnVSzF8TOjQZ-Ljr~Dr4Pr0t2Ixci8VkqjkxjdA0LtN7lXIFEbx0GyalBGO~QjoH1oO2NIcC9yBtl-0N81AkYBD~7yB2DKH0tj88GWXf-wGI56b1c5NBw__",
+    title: "PURITO Centella Unscented Recovery Cream 50 ml / 1.7 fl. oz.",
+    price: "19.50",
+    favorite: false,
+  },
+  {
+    id: "e15",
+    image:
+      " https://s3-alpha-sig.figma.com/img/994f/4f91/ff45c2c6e20dd17b2c943de1b62f9a3b?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=HVFdcWbSb4VU4zgJ2EVADo6v2ExXNHiSu35RNGLQ8d9RRK6ZiM8OwJaWCKpkHBY~LvlnwA2gwfiSIojLVi73d2m2ggj6fcIf9299BDNXu925dTAPerlgKsvj22m24Eq4IgH16jcqkMjVtKHb3sH0opL15DcDN~8jR2AvnUBOfztiq9-YkSskIdV5ZYv2QOSHSaFUJjt2PlulCsTA-P9SuTmCKUYy8phIkCnVSzF8TOjQZ-Ljr~Dr4Pr0t2Ixci8VkqjkxjdA0LtN7lXIFEbx0GyalBGO~QjoH1oO2NIcC9yBtl-0N81AkYBD~7yB2DKH0tj88GWXf-wGI56b1c5NBw__",
+    title: "PURITO Centella Unscented Recovery Cream 50 ml / 1.7 fl. oz.",
+    price: "19.50",
+    favorite: false,
+  },
+  {
+    id: "e16",
+    image:
+      " https://s3-alpha-sig.figma.com/img/994f/4f91/ff45c2c6e20dd17b2c943de1b62f9a3b?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=HVFdcWbSb4VU4zgJ2EVADo6v2ExXNHiSu35RNGLQ8d9RRK6ZiM8OwJaWCKpkHBY~LvlnwA2gwfiSIojLVi73d2m2ggj6fcIf9299BDNXu925dTAPerlgKsvj22m24Eq4IgH16jcqkMjVtKHb3sH0opL15DcDN~8jR2AvnUBOfztiq9-YkSskIdV5ZYv2QOSHSaFUJjt2PlulCsTA-P9SuTmCKUYy8phIkCnVSzF8TOjQZ-Ljr~Dr4Pr0t2Ixci8VkqjkxjdA0LtN7lXIFEbx0GyalBGO~QjoH1oO2NIcC9yBtl-0N81AkYBD~7yB2DKH0tj88GWXf-wGI56b1c5NBw__",
+    title: "PURITO Centella Unscented Recovery Cream 50 ml / 1.7 fl. oz.",
+    price: "19.50",
+    favorite: false,
+  },
 ];
