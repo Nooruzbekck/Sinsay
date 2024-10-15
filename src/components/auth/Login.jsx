@@ -96,6 +96,7 @@ const StyledContainer = styled.div`
   margin: auto;
   justify-content: center;
   align-items: center;
+  margin-top: 150px;
 `;
 
 const StyledForm = styled.form`
