@@ -1,5 +1,3 @@
-
-
-export function App() {
+ function App() {
   return <div></div>;
 }
