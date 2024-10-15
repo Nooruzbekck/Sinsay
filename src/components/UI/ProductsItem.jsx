@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { Icons } from "../../assets";
 export const ProductsItem = ({
@@ -9,11 +9,6 @@ export const ProductsItem = ({
   onAddToCart,
   favorite,
 }) => {
-  const [state, setState] = useState(favorite);
-
-  const addToHandler = () => {
-    setState(!state);
-  };
   return (
     <>
       <StyledCard>
@@ -22,14 +17,14 @@ export const ProductsItem = ({
         <StyledSvgDiv>
           <b>${price}</b>
 
-          {state ? (
-            <Icons.BlackHeart onClick={addToHandler} />
+          {favorite === "favorite" ? (
+            <Icons.BlackHeart onClick={() => onAddToCart(id)} />
           ) : (
-            <Icons.Heart onClick={addToHandler} />
+            <Icons.Heart onClick={() => onAddToCart(id)} />
           )}
         </StyledSvgDiv>
         <button onClick={() => onAddToCart(id)}>Add to cart</button>
-        {state && (
+        {favorite === "favorite" && (
           <StyledDelete>
             <Icons.Korzina />
             delete
@@ -84,4 +79,5 @@ const StyledDelete = styled.div`
   justify-content: center;
   background-color: white;
   color: black;
+  cursor: pointer;
 `;

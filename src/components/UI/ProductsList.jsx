@@ -1,13 +1,11 @@
 import styled from "styled-components";
 import { ProductsItem } from "./ProductsItem";
-import { useState } from "react";
 
-export const ProductsList = ({ products = []}) => {
-
+export const ProductsList = ({ products = [] }) => {
   return (
     <StyledContainer>
       {products.map((card) => (
-        <ProductsItem key={card.id} {...card}  />
+        <ProductsItem key={card.id} {...card} favorite={"favorite"} />
       ))}
     </StyledContainer>
   );
