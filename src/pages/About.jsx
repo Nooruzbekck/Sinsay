@@ -7,7 +7,6 @@ import { Icons } from "../assets";
 export const About = () => {
   return (
     <div>
-      {/* Первый этап */}
       <StyledDifing>
         <StyleDiv>
           <StyleHeading>Homepage - About</StyleHeading>
@@ -50,7 +49,6 @@ export const About = () => {
           </div>
         </StyleDiv>
       </StyledDifing>
-      {/* Второй этап */}
       <Stylep>
         <Stylexr>
           <h1>OUR FORMULATIONS</h1> <br />
@@ -91,7 +89,6 @@ export const About = () => {
         </Stylexr>
         <Styleriz></Styleriz>
       </Stylep>
-      {/* Третий этап */}
       <Stylegment>
         <StyleMma></StyleMma>
         <StyleText>
@@ -131,7 +128,6 @@ export const About = () => {
           </Stylekar>
         </StyleText>
       </Stylegment>
-      {/* Четвертый этап */}
       <div>
         <Stylemobile>
           We investigate the right ingredients for <br />
@@ -155,6 +151,8 @@ export const About = () => {
   );
 };
 
+
+
 const StyleHeading = styled.p`
   font-size: 21px;
   font-weight: 400;
@@ -163,7 +161,7 @@ const StyleHeading = styled.p`
 const StyleDiv = styled.div`
   background-image: url(${bg});
   background-repeat: no-repeat;
-  width: 1200px;
+  width: 1600px;
   height: 900px;
 `;
 const Styleh1 = styled.h1`

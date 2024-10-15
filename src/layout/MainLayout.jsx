@@ -7,6 +7,7 @@ import { Footer } from "../components/Footer";
 import styled from "styled-components";
 import { FavoritePage } from "../pages/FavoritePage";
 import { About } from "../pages/About";
+import { OrderPage } from "../pages/OrderPage";
 
 export const MainLayout = () => {
   const { isLoggedIn } = useContext(AuthContext);
@@ -18,7 +19,7 @@ export const MainLayout = () => {
         {isLoggedIn === "/" ? (
           <MainPage />
         ) : isLoggedIn === "cart" ? (
-          <h1>cart</h1>
+          <OrderPage />
         ) : isLoggedIn === "favorite" ? (
           <FavoritePage />
         ) : isLoggedIn == "about" ? (
