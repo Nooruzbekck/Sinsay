@@ -31,6 +31,7 @@ const StyledLi = styled.li`
   justify-content: space-between;
   padding: 30px 0 0 30px;
   gap: 27;
+  /* border-bottom: 1px solid black; */
 `;
 
 const Quantity = styled.span`
@@ -44,6 +45,7 @@ const StyledImg = styled.img`
   border: 2px solid black;
   background-color: #000000;
   margin-bottom: 30px;
+
 `;
 const StyledDiv = styled.div`
   display: flex;

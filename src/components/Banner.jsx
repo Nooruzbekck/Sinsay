@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+import React from "react";
+import Restor from "../icons/Restor.png";
+import styled from "styled-components";
+const Banner = () => {
+  return (
+    <DivStyle>
+      <BannerStyle src={Restor} alt="" />
+=======
 import React, { useState, useEffect } from "react";
 import Restor1 from "../icons/Restor.png";
 import Restor2 from "../assets/slaider.png";
@@ -20,12 +29,21 @@ const Banner = () => {
   return (
     <DivStyle>
       <BannerStyle src={banners[currentBannerIndex]} alt="Banner" />
+>>>>>>> 07e443c9d296e995bee88b92a621dd92157ebdeb
       <TextStyle>View all products</TextStyle>
     </DivStyle>
   );
 };
 
 export default Banner;
+<<<<<<< HEAD
+const DivStyle = styled.div`
+  margin: 10px;
+`;
+const BannerStyle = styled.img`
+  width: 100%;
+  height: 100vh;
+=======
 
 const DivStyle = styled.div`
   margin: 10px;
@@ -39,6 +57,7 @@ const BannerStyle = styled.img`
   z-index: 1; 
   background-attachment: fixed;
   
+>>>>>>> 07e443c9d296e995bee88b92a621dd92157ebdeb
 `;
 const TextStyle = styled.h2`
   font-family: Montserrat;
@@ -54,5 +73,9 @@ const TextStyle = styled.h2`
   height: 0%;
   display: block;
   overflow: hidden;
+<<<<<<< HEAD
+  width: 30%px;
+=======
   width: 30%;
+>>>>>>> 07e443c9d296e995bee88b92a621dd92157ebdeb
 `;
