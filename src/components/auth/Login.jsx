@@ -2,6 +2,9 @@ import React, { useContext, useState } from "react";
 import { Input } from "../UI/Input";
 import styled from "styled-components";
 import { AuthContext } from "../context/LoginContext";
+import { Button } from "../UI/Button";
+import Header from "../Header/Header";
+import { Footer } from "../Footer";
 
 export const Login = () => {
   const [formData, setFormData] = useState({ email: "", password: "" });
@@ -50,6 +53,8 @@ export const Login = () => {
   };
 
   return (
+   <StyledContainers>
+      <Header/>
     <StyledContainer>
       <h1>Login</h1>
       <StyledForm onSubmit={handleLogin}>
@@ -77,10 +82,13 @@ export const Login = () => {
         </StyledDiv>
         {error && <ErrorText>{error}</ErrorText>}
         <StyledArticle>
-          <button type="submit">Login</button>
+          <h1>Forgot your password</h1>
+          <Button type="submit">Sign in</Button>
         </StyledArticle>
       </StyledForm>
     </StyledContainer>
+      <Footer/>
+    </StyledContainers>
   );
 };
 
@@ -110,6 +118,12 @@ const StyledArticle = styled.article`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+  font-size: 21px;
+  color: #000000;
+  font-weight:500;
+  line-height: 25px;
 `;
 
 const ErrorText = styled.p`
@@ -117,3 +131,9 @@ const ErrorText = styled.p`
   font-size: 14px;
   margin: 0;
 `;
+
+const StyledContainers = styled.div`
+  display: flex;
+flex-direction: column;
+gap: 240px;
+`

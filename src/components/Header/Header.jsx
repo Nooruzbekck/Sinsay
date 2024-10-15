@@ -1,20 +1,19 @@
-import React from "react";
 import styled from "styled-components";
 import { Icons } from "../assets";
 const Header = () => {
   return (
     <StyleHeader>
       <BurgerDiv>
-      <Icons.Burgermenu  />
+        <Icons.Burgermenu />
       </BurgerDiv>
       <StyleText>SINSAY</StyleText>
       <ChildDiv>
-      <Icons.Search />
+        <Icons.Search />
         <StylePeople>
-        <Icons.People />
+          <Icons.People />
         </StylePeople>
         <Icons.Heart />
-        <Icons.Bag />
+        <Icons.Bag onClick={() => setIsLoggedIn('cart')}/>
       </ChildDiv>
     </StyleHeader>
   );
@@ -29,14 +28,14 @@ const StyleHeader = styled.header`
   border-bottom: 2px solid black;
 `;
 const BurgerDiv = styled.div`
-padding-top: 20px;
+  padding-top: 20px;
 `;
 const StyleText = styled.h2`
-padding-top: 9px;
+  padding-top: 9px;
 `;
 const StylePeople = styled.div`
   padding-top: 4px;
-`
+`;
 const ChildDiv = styled.div`
   display: flex;
   padding-top: 20px;

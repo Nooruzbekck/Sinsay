@@ -1,7 +1,7 @@
-import Banner from "./components/Banner";
+import { MainLayout } from "./layout/MainLayout";
 
 export function App() {
   return <div>
-    <Banner/>
+    <MainLayout/>
   </div>;
 }
