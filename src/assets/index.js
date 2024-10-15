@@ -9,6 +9,8 @@ import People from "../assets/icon/people.svg?react";
 import Bag from "../assets/icon/bag.svg?react";
 import Vegan from "../assets/icon/vegans.svg?react";
 import Bitcoin from "../assets/icon/bitcoin.svg?react";
+import BlackHeart from "../assets/icon/black.svg?react";
+
 export const Icons = {
   Korzina,
   Burgermenu,
@@ -21,4 +23,5 @@ export const Icons = {
   Bag,
   Vegan,
   Bitcoin,
+  BlackHeart,
 };
