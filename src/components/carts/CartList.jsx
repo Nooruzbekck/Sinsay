@@ -10,7 +10,7 @@ export const CartList = () => {
         <CartItem key={item.id} {...item} />
       ))}
     </StyledLink>
-  );
+);
 };
 
 const StyledLink = styled.ul`
