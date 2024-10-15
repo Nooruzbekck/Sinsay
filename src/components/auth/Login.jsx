@@ -1,10 +1,8 @@
 import React, { useContext, useState } from "react";
 import { Input } from "../UI/Input";
 import styled from "styled-components";
-import { AuthContext } from "../context/LoginContext";
+import { AuthContext } from "../../context/LoginContext";
 import { Button } from "../UI/Button";
-import Header from "../Header/Header";
-import { Footer } from "../Footer";
 
 export const Login = () => {
   const [formData, setFormData] = useState({ email: "", password: "" });
@@ -44,50 +42,48 @@ export const Login = () => {
     }
 
     if (!validatePassword(password)) {
-      return; 
+      return;
     }
 
     localStorage.setItem("userData", JSON.stringify(formData));
-    setIsLoggedIn(true);
-    setError(""); 
+    setIsLoggedIn("/");
+    setError("");
   };
 
   return (
-   <StyledContainers>
-      <Header/>
-    <StyledContainer>
-      <h1>Login</h1>
-      <StyledForm onSubmit={handleLogin}>
-        <StyledDiv>
-          <label>Email</label>
-          <Input
-            name="email"
-            type="email"
-            value={formData.email}
-            onChange={handleInputChange}
-            placeholder="Email:"
-            required
-          />
-        </StyledDiv>
-        <StyledDiv>
-          <label>Password</label>
-          <Input
-            name="password"
-            type="password"
-            value={formData.password}
-            onChange={handleInputChange}
-            placeholder="Password:"
-            required
-          />
-        </StyledDiv>
-        {error && <ErrorText>{error}</ErrorText>}
-        <StyledArticle>
-          <h1>Forgot your password</h1>
-          <Button type="submit">Sign in</Button>
-        </StyledArticle>
-      </StyledForm>
-    </StyledContainer>
-      <Footer/>
+    <StyledContainers>
+      <StyledContainer>
+        <h1>Login</h1>
+        <StyledForm onSubmit={handleLogin}>
+          <StyledDiv>
+            <label>Email</label>
+            <Input
+              name="email"
+              type="email"
+              value={formData.email}
+              onChange={handleInputChange}
+              placeholder="Email:"
+              required
+            />
+          </StyledDiv>
+          <StyledDiv>
+            <label>Password</label>
+            <Input
+              name="password"
+              type="password"
+              value={formData.password}
+              onChange={handleInputChange}
+              placeholder="Password:"
+              required
+            />
+          </StyledDiv>
+          {error && <ErrorText>{error}</ErrorText>}
+          <StyledArticle>
+            <h1>Forgot your password</h1>
+            <Button type="submit">Sign in</Button>
+          </StyledArticle>
+        </StyledForm>
+      </StyledContainer>
     </StyledContainers>
   );
 };
@@ -122,7 +118,7 @@ const StyledArticle = styled.article`
   gap: 50px;
   font-size: 21px;
   color: #000000;
-  font-weight:500;
+  font-weight: 500;
   line-height: 25px;
 `;
 
@@ -134,6 +130,6 @@ const ErrorText = styled.p`
 
 const StyledContainers = styled.div`
   display: flex;
-flex-direction: column;
-gap: 240px;
-`
+  flex-direction: column;
+  gap: 240px;
+`;

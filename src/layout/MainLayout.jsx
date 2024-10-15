@@ -1,11 +1,12 @@
 import { useContext } from "react";
-import { AuthContext } from "../components/context/LoginContext";
-import { PRODUCTS } from "../utils/constants/products";
+import { AuthContext } from "../context/LoginContext";
 import { Login } from "../components/auth/Login";
 import { MainPage } from "../pages/MainPage";
 import Header from "../components/Header/Header";
 import { Footer } from "../components/Footer";
 import styled from "styled-components";
+import { FavoritePage } from "../pages/FavoritePage";
+import { About } from "../pages/About";
 
 export const MainLayout = () => {
   const { isLoggedIn } = useContext(AuthContext);
@@ -17,11 +18,11 @@ export const MainLayout = () => {
         {isLoggedIn === "/" ? (
           <MainPage />
         ) : isLoggedIn === "cart" ? (
-          <h1>asdfasdf</h1>
+          <h1>cart</h1>
         ) : isLoggedIn === "favorite" ? (
-          <h1>Favorite</h1>
+          <FavoritePage />
         ) : isLoggedIn == "about" ? (
-          <h1>About</h1>
+          <About />
         ) : (
           <Login />
         )}

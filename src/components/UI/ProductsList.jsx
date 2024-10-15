@@ -1,22 +1,24 @@
-<<<<<<< HEAD
-import React from "react";
 import styled from "styled-components";
 import { ProductsItem } from "./ProductsItem";
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
+import { AuthContext } from "../../context/LoginContext";
+import { ProductContext } from "../../context/ProductContext";
 
-export const ProductsList = ({ products=[]}) => {
+export const ProductsList = ({ products = [], favorite }) => {
+  const { AddToCart } = useContext(CartContext);
+  const { isLoggedIn } = useContext(AuthContext);
+  const { onAddToFavorite } = useContext(ProductContext);
   return (
     <StyledContainer>
-
-=======
-import styled from "styled-components";
-import { ProductsItem } from "./ProductsItem";
-
-export const ProductsList = ({ products = [] }) => {
-  return (
-    <StyledContainer>
->>>>>>> edc32261bbe6004952bdec55af5304a598d99204
       {products.map((card) => (
-        <ProductsItem key={card.id} {...card} favorite={"favorite"} />
+        <ProductsItem
+          key={card.id}
+          onAddToCart={AddToCart}
+          {...card}
+          AddToFaverit={onAddToFavorite}
+          favoritePath={isLoggedIn}
+        />
       ))}
     </StyledContainer>
   );
@@ -25,10 +27,6 @@ const StyledContainer = styled.ul`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-<<<<<<< HEAD
-  gap: 117px 80px;
-=======
   gap: 120px 20px;
   padding: 100px;
->>>>>>> edc32261bbe6004952bdec55af5304a598d99204
 `;

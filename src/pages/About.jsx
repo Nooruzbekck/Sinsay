@@ -50,7 +50,7 @@ export const About = () => {
           </div>
         </StyleDiv>
       </StyledDifing>
-                            {/* Второй этап */}
+      {/* Второй этап */}
       <Stylep>
         <Stylexr>
           <h1>OUR FORMULATIONS</h1> <br />
@@ -91,7 +91,7 @@ export const About = () => {
         </Stylexr>
         <Styleriz></Styleriz>
       </Stylep>
-                        {/* Третий этап */}
+      {/* Третий этап */}
       <Stylegment>
         <StyleMma></StyleMma>
         <StyleText>
@@ -130,24 +130,27 @@ export const About = () => {
             </p>
           </Stylekar>
         </StyleText>
-      </Stylegment> 
-                        {/* Четвертый этап */}
+      </Stylegment>
+      {/* Четвертый этап */}
       <div>
-
         <Stylemobile>
-          We investigate the right ingredients for  <br />
+          We investigate the right ingredients for <br />
           each skin typology. Our formulations are <br />
-           concise, concentrated, and made in France. <br />
+          concise, concentrated, and made in France. <br />
         </Stylemobile>
-        
-         <StylemyI>
-        <div><Icons.Vegan/></div>
-          <div><Icons.Bitcoin/></div>
-          <div><Icons.Vegan/></div>
-          </StylemyI>
+
+        <StylemyI>
+          <div>
+            <Icons.Vegan />
+          </div>
+          <div>
+            <Icons.Bitcoin />
+          </div>
+          <div>
+            <Icons.Vegan />
+          </div>
+        </StylemyI>
       </div>
-
-
     </div>
   );
 };
@@ -220,14 +223,14 @@ const Styleship = styled.h1`
 const Stylekar = styled.div`
   padding-left: 55px;
 `;
-// 
+//
 const Stylemobile = styled.p`
-padding: 50px 0 0 550px;
-font-size: 27px;
-font-weight: 400;
-`
+  padding: 50px 0 0 550px;
+  font-size: 27px;
+  font-weight: 400;
+`;
 const StylemyI = styled.div`
   display: flex;
   gap: 120px;
   padding: 40px 0 0 420px;
-`
+`;

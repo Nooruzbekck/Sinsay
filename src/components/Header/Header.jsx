@@ -1,19 +1,22 @@
 import styled from "styled-components";
-import { Icons } from "../assets";
+import { Icons } from "../../assets";
+import { AuthContext } from "../../context/LoginContext";
+import { useContext } from "react";
 const Header = () => {
+  const { setIsLoggedIn } = useContext(AuthContext);
   return (
     <StyleHeader>
       <BurgerDiv>
-        <Icons.Burgermenu />
+        <Icons.Burgermenu onClick={() => setIsLoggedIn("/")} />
       </BurgerDiv>
       <StyleText>SINSAY</StyleText>
       <ChildDiv>
-        <Icons.Search />
+        <Icons.Search onClick={() => setIsLoggedIn("about")} />
         <StylePeople>
           <Icons.People />
         </StylePeople>
-        <Icons.Heart />
-        <Icons.Bag onClick={() => setIsLoggedIn('cart')}/>
+        <Icons.Heart onClick={() => setIsLoggedIn("favorite")} />
+        <Icons.Bag onClick={() => setIsLoggedIn("cart")} />
       </ChildDiv>
     </StyleHeader>
   );

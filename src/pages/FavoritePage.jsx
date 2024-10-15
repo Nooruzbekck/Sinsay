@@ -1,12 +1,16 @@
 import styled from "styled-components";
 import { ProductsList } from "../components/UI/ProductsList";
-import { PRODUCTS } from "../utils/constants/products";
+import { useContext } from "react";
+import { ProductContext } from "../context/ProductContext";
 
 export const FavoritePage = () => {
+  const { products } = useContext(ProductContext);
+
+  const favoriteProducts = products.filter((product) => product.favorite);
   return (
     <div>
       <Title>Wish list</Title>
-      <ProductsList products={PRODUCTS} />
+      <ProductsList products={favoriteProducts} />
     </div>
   );
 };
