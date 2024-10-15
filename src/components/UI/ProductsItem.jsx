@@ -11,6 +11,7 @@ export const ProductsItem = ({
 }) => {
   return (
     <>
+ 
       <StyledCard>
         <Styledimage src={image} alt={title} />
         <p>{title} </p>
