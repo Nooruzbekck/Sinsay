@@ -1,10 +1,19 @@
 import { createContext, useState } from "react";
-import { PRODUCTS } from "../utils/constants/products";
 
 export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [carts, setCarts] = useState([]);
+
+  const [count, setCount] = useState(1);
+
+  const increment = () => {
+    setCount((prevcount) => prevcount + 1);
+  };
+
+  const decrement = () => {
+    setCount((prevcount) => (prevcount > 1 ? prevcount - 1 : 1));
+  };
 
   const AddToCart = (newProduct) => {
     console.log(newProduct);
@@ -20,10 +29,16 @@ export const CartProvider = ({ children }) => {
       setCarts(currentMap);
     }
   };
-  console.log(carts);
+
+  const removeFromCart = (id) => {
+    const updatedCarts = carts.filter((item) => item.id !== id);
+    setCarts(updatedCarts);
+  };
 
   return (
-    <CartContext.Provider value={{ carts, AddToCart }}>
+    <CartContext.Provider
+      value={{ carts, AddToCart, removeFromCart, count, increment, decrement }}
+    >
       {children}
     </CartContext.Provider>
   );
