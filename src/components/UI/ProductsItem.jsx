@@ -58,7 +58,16 @@ const Styledimage = styled.img`
   width: 305px;
   height: 305px;
   border: 2px solid;
+  &:hover{
+    border: none;
+    -webkit-box-shadow: 4px 1px 24px 17px rgba(9, 9, 9, 0.18);
+-moz-box-shadow: 4px 1px 24px 17px rgba(9, 9, 9, 0.18);
+box-shadow: 4px 1px 24px 17px rgba(9, 9, 9, 0.18);
+  }
 `;
+
+
+
 const StyledCard = styled.li`
   width: 304px;
   height: 500px;

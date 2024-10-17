@@ -9,11 +9,17 @@ export const Button = ({ onClick, children, type, ...props }) => {
   );
 };
 const StyledButton = styled.button`
-  width: 130px;
+   width: 130px;
   height: 49px;
   background-color: #000000;
   color: #ffffff;
   font-size: 16px;
   font-weight: 400;
   border: none;
+  border-radius: 15px;
+  transition: 0.3s; 
+
+  &:hover {
+    transform: translateY(-10px); 
+  }
 `;

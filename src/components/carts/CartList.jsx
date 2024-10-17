@@ -1,59 +1,64 @@
-import React from "react";
+import React, { useContext } from "react";
 import { CartItem } from "./CartItem";
 import styled from "styled-components";
-import { CARDS } from "../../utils/constants/cart";
+import { CartContext } from "../../context/CartContext";
 
 export const CartList = () => {
+  const { carts, removeFromCart } = useContext(CartContext);
+
   return (
     <StyledLink>
       <StyledUl>
         <StyledH1>Cart</StyledH1>
-      <StyledConst>
-      <StyledProducts>
-          <p>Product</p>
-        </StyledProducts>
-        <StyledDiv>
-          <p>Price</p>
-          <p>Quantity</p>
-          <p>Total</p>
-        </StyledDiv>
-      </StyledConst>
+        <StyledConst>
+          <StyledProducts>
+            <p>Product</p>
+          </StyledProducts>
+          <StyledDiv>
+            <p>Price</p>
+            <p>Quantity</p>
+            <p>Total</p>
+          </StyledDiv>
+        </StyledConst>
       </StyledUl>
-      {CARDS?.map((item) => (
-        <CartItem key={item.id} {...item} />
+      {carts?.map((item) => (
+        <CartItem key={item.id} {...item} removeFromCart={removeFromCart} />
       ))}
     </StyledLink>
   );
 };
 
 const StyledLink = styled.ul`
-  /* width: 1220px;
-  height: 884px; */
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 150px;
 `;
 const StyledDiv = styled.div`
   display: flex;
-gap: 90px;
-margin-top: 40px;
+  gap: 120px;
+  margin-top: 40px;
+  p{
+    font-size: 20px;
+  }
 `;
 const StyledUl = styled.div`
-  width: 1000px;
-  border-bottom: 1px solid black;
-
+  width: 1200px;
+  border-bottom: 2px solid black;
 `;
 const StyledConst = styled.div`
-display: flex;
-justify-content: space-around;
-`
-const StyledH1=styled.h1`
-   font-size: 61px;
-    font-weight: 500;
-    text-align: center;
-
-`
+  display: flex;
+  justify-content: space-around;
+  p{
+    font-size: 20px;
+  }
+`;
+const StyledH1 = styled.h1`
+  font-size: 61px;
+  font-weight: 500;
+  text-align: center;
+`;
 
 const StyledProducts = styled.div`
-margin-top: 40px;
-`
+  margin-top: 40px;
+`;

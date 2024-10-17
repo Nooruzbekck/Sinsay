@@ -8,10 +8,10 @@ export const FavoritePage = () => {
 
   const favoriteProducts = products.filter((product) => product.favorite);
   return (
-    <div>
+    <StyledContainer>
       <Title>Wish list</Title>
       <ProductsList products={favoriteProducts} />
-    </div>
+    </StyledContainer>
   );
 };
 
@@ -21,3 +21,7 @@ const Title = styled.h1`
   font-weight: 400;
   color: #000;
 `;
+const StyledContainer = styled.div`
+  padding: 150px 0px;
+
+`

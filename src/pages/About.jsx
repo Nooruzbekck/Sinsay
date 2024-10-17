@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import bg from "../assets/image/bg.png";
-import rz from "../assets/image/rz.png";
+import rz from "../assets/image/rz.png"
 import mma from "../assets/image/mma.png";
 import { Icons } from "../assets";
 export const About = () => {
@@ -156,12 +156,12 @@ export const About = () => {
 const StyleHeading = styled.p`
   font-size: 21px;
   font-weight: 400;
-  padding: 89px 0 0 30px;
+  padding: 109px 0 0 30px;
 `;
 const StyleDiv = styled.div`
   background-image: url(${bg});
   background-repeat: no-repeat;
-  width: 1600px;
+  width: 1200px;
   height: 900px;
 `;
 const Styleh1 = styled.h1`
