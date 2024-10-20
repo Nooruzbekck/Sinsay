@@ -12,10 +12,8 @@ export const ProductsItem = ({
   favoritePath,
   AddToFaverit,
 }) => {
-
   return (
     <>
- 
       <StyledCard>
         <Styledimage src={image} alt={title} />
         <p>{title} </p>
@@ -44,7 +42,7 @@ export const ProductsItem = ({
           Add to cart
         </Button>
         {favoritePath === "favorite" && (
-          <StyledDelete onClick={()=> AddToFaverit(id)}>
+          <StyledDelete onClick={() => AddToFaverit(id)}>
             <Icons.Korzina />
             delete
           </StyledDelete>
@@ -57,16 +55,15 @@ export const ProductsItem = ({
 const Styledimage = styled.img`
   width: 305px;
   height: 305px;
-  border: 2px solid;
-  &:hover{
+  border: 2px solid #BCBCBC;
+  border-radius: 10px;
+  &:hover {
     border: none;
     -webkit-box-shadow: 4px 1px 24px 17px rgba(9, 9, 9, 0.18);
--moz-box-shadow: 4px 1px 24px 17px rgba(9, 9, 9, 0.18);
-box-shadow: 4px 1px 24px 17px rgba(9, 9, 9, 0.18);
+    -moz-box-shadow: 4px 1px 24px 17px rgba(9, 9, 9, 0.18);
+    box-shadow: 4px 1px 24px 17px rgba(9, 9, 9, 0.18);
   }
 `;
-
-
 
 const StyledCard = styled.li`
   width: 304px;

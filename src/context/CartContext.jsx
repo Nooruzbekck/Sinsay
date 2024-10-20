@@ -5,21 +5,36 @@ export const CartContext = createContext();
 export const CartProvider = ({ children }) => {
   const [carts, setCarts] = useState([]);
 
-  const [count, setCount] = useState(1);
+  const subtotal = carts.reduce(
+    (acc, item) => acc + item.price * item.quantity,
+    0
+  );
 
-  const increment = () => {
-    setCount((prevcount) => prevcount + 1);
+  const increment = (id) => {
+    setCarts((prevCarts) =>
+      prevCarts.map((item) =>
+        item.id === id ? { ...item, quantity: item.quantity + 1 } : item
+      )
+    );
   };
 
-  const decrement = () => {
-    setCount((prevcount) => (prevcount > 1 ? prevcount - 1 : 1));
+  const decrement = (id) => {
+    setCarts((prevCarts) =>
+      prevCarts.map((item) =>
+        item.id === id
+          ? { ...item, quantity: Math.max(item.quantity - 1, 1) }
+          : item
+      )
+    );
   };
 
   const AddToCart = (newProduct) => {
-    console.log(newProduct);
     const isDataPreset = carts.find((v) => v.id === newProduct.id);
     if (!isDataPreset) {
-      setCarts((product) => [...product, { ...newProduct, quantity: 1 }]);
+      setCarts((product) => [
+        ...product,
+        { ...newProduct, quantity: 1 },
+      ]);
     } else {
       const currentMap = carts.map((product) =>
         product.id === newProduct.id
@@ -37,7 +52,14 @@ export const CartProvider = ({ children }) => {
 
   return (
     <CartContext.Provider
-      value={{ carts, AddToCart, removeFromCart, count, increment, decrement }}
+      value={{
+        carts,
+        AddToCart,
+        removeFromCart,
+        increment,
+        decrement,
+        subtotal,
+      }}
     >
       {children}
     </CartContext.Provider>

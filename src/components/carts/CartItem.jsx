@@ -3,22 +3,23 @@ import { Icons } from "../../assets";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 
-export const CartItem = ({ id, image, title, price, removeFromCart }) => {
- const {count, increment, decrement} = useContext(CartContext)
+export const CartItem = ({ id, image, title, price }) => {
+  const { increment, decrement, removeFromCart, carts } = useContext(CartContext);
+  const cartItem = carts.find(item => item.id === id);
 
   return (
     <StyledDiv>
       <StyledLi>
         <StyledImg src={image} alt={title} />
         <StyledP>{title}</StyledP>
-        <p>${(price * count).toFixed(2)}</p>
+        <p>${(price * cartItem.quantity).toFixed(2)}</p>
         <StyledDiving>
           <WrapperActions>
-            <StyledButton onClick={decrement}>-</StyledButton>
-            <Count>{count}</Count>
-            <StyledButton onClick={increment}>+</StyledButton>
+            <StyledButton onClick={() => decrement(id)}>-</StyledButton>
+            <Count>{cartItem.quantity}</Count>
+            <StyledButton onClick={() => increment(id)}>+</StyledButton>
           </WrapperActions>
-          <p>${(price * count).toFixed(2)}</p>
+          <p>${(price * cartItem.quantity).toFixed(2)}</p>
         </StyledDiving>
       </StyledLi>
       <StyledIcons>
@@ -50,7 +51,7 @@ const StyledLi = styled.li`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px 0 0 30px;
+  padding: 25px 0 25px 30px;
   gap: 25px;
   p {
     font-weight: 600;
