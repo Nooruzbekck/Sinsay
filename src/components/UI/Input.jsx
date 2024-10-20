@@ -20,12 +20,13 @@ export const Input = ({
 
 const StyledInput = styled.input`
   width: 542px;
-  height: 80px;
+  height: 60px;
   border: 1px solid #000000;
   padding-left: 20px;
   font-size: 20px;
   font-weight: 400;
   color: #171717;
+  border-radius: 10px;
 
   &::placeholder {
     font-size: 16px;

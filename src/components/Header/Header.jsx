@@ -4,6 +4,7 @@ import { AuthContext } from "../../context/LoginContext";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import { ProductContext } from "../../context/ProductContext";
+import { FaArrowLeft } from "react-icons/fa";
 
 const Header = () => {
   const { setIsLoggedIn } = useContext(AuthContext);
@@ -12,12 +13,12 @@ const Header = () => {
 
   const favoriteCount = products.filter((product) => product.favorite).length;
 
-  return (  
+  return (
     <StyleHeader>
       <BurgerDiv>
-        <Icons.Burgermenu onClick={() => setIsLoggedIn("/")} />
+        <Icons.LogoSinsay onClick={() => setIsLoggedIn("/")} />
       </BurgerDiv>
-      <AnimatedHeading>
+      <AnimatedHeading className="svgclogo">
         {"SINSAY".split("").map((letter, index) => (
           <AnimatedLetter key={index} delay={index * 0.5}>
             {letter}
@@ -27,7 +28,7 @@ const Header = () => {
       <ChildDiv>
         <Icons.Search />
         <div>
-          <Icons.People onClick={() => setIsLoggedIn("about")} />
+          <Icons.People />
         </div>
         <WrapperBag>
           <Icons.Heart onClick={() => setIsLoggedIn("favorite")} />
@@ -54,13 +55,22 @@ const StyleHeader = styled.header`
   padding-right: 100px;
   border-bottom: 2px solid black;
   position: fixed;
-  z-index: 10px;
-  border-radius: 120px / 5px;
+  z-index: 1000;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
+  background-color: #cbced0;
+
 `;
+
+
 
 const BurgerDiv = styled.div`
   padding-top: 30px;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  & > svg {
+    padding-bottom: 25px;
+  }
 `;
 
 const ChildDiv = styled.div`
@@ -106,13 +116,25 @@ const AnimatedLetter = styled.span`
   display: inline-block;
   opacity: 0;
   transform: translateX(100%);
-  animation: slideIn 0.5s ease-out forwards;
+  animation: slideIn 4s ease-in-out infinite;
   animation-delay: ${(props) => props.delay}s;
 
   @keyframes slideIn {
-    to {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    20% {
       opacity: 1;
       transform: translateX(0);
+    }
+    80% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(-100%);
     }
   }
 `;

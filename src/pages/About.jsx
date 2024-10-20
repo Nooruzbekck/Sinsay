@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import bg from "../assets/image/bg.png";
-import rz from "../assets/image/rz.png"
+import rz from "../assets/image/rz.png";
 import mma from "../assets/image/mma.png";
 import { Icons } from "../assets";
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 export const About = () => {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
   return (
     <div>
       <StyledDifing>
@@ -12,7 +18,9 @@ export const About = () => {
           <StyleHeading>Homepage - About</StyleHeading>
           <div>
             <Styleh1>ABOUT SINSEY</Styleh1>
-            <Stylewrap>
+            <Stylewrap data-aos="fade-left"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
               <p>
                 I wanted to create a radical new <br />
                 skincare brand. For too long, the world <br />
@@ -50,7 +58,9 @@ export const About = () => {
         </StyleDiv>
       </StyledDifing>
       <Stylep>
-        <Stylexr>
+        <Stylexr data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
           <h1>OUR FORMULATIONS</h1> <br />
           <p>
             Our philosophy is not to add anything to <br />
@@ -91,7 +101,9 @@ export const About = () => {
       </Stylep>
       <Stylegment>
         <StyleMma></StyleMma>
-        <StyleText>
+        <StyleText data-aos="fade-left"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
           <Styleship>B CORP CERTIFICATION</Styleship> <br /> <br />
           <Stylekar>
             <p>
@@ -150,8 +162,6 @@ export const About = () => {
     </div>
   );
 };
-
-
 
 const StyleHeading = styled.p`
   font-size: 21px;

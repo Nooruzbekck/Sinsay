@@ -18,8 +18,12 @@ const StyledButton = styled.button`
   border: none;
   border-radius: 15px;
   transition: 0.3s; 
-
   &:hover {
     transform: translateY(-10px); 
+    box-shadow: 0 30px 10px rgba(0, 0, 0, 0.2); 
+  }
+  &:active {
+    transform: translateY(+10px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
   }
 `;

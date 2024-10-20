@@ -3,16 +3,23 @@ import { Input } from "../UI/Input";
 import styled from "styled-components";
 import { AuthContext } from "../../context/LoginContext";
 import { Button } from "../UI/Button";
+import { IoEyeSharp } from "react-icons/io5";
+import { FaEyeSlash } from "react-icons/fa";
 
 export const Login = () => {
   const [formData, setFormData] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   const { setIsLoggedIn } = useContext(AuthContext);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const togglePasswordVisibility = () => {
+    setShowPassword((prev) => !prev);
   };
 
   const validateEmail = (email) => {
@@ -56,26 +63,31 @@ export const Login = () => {
         <h1>Login</h1>
         <StyledForm onSubmit={handleLogin}>
           <StyledDiv>
-            <label>Email</label>
+            <label>Email:</label>
             <Input
               name="email"
               type="email"
               value={formData.email}
               onChange={handleInputChange}
-              placeholder="Email:"
+              placeholder="Введите свою почту"
               required
             />
           </StyledDiv>
           <StyledDiv>
-            <label>Password</label>
-            <Input
-              name="password"
-              type="password"
-              value={formData.password}
-              onChange={handleInputChange}
-              placeholder="Password:"
-              required
-            />
+            <label>Password:</label>
+            <PasswordContainer>
+              <Input
+                name="password"
+                type={showPassword ? "text" : "password"}
+                value={formData.password}
+                onChange={handleInputChange}
+                placeholder="Введите свою пароль"
+                required
+              />
+              <EyeIcon onClick={togglePasswordVisibility}>
+                {showPassword ? <IoEyeSharp /> : <FaEyeSlash />}
+              </EyeIcon>
+            </PasswordContainer>
           </StyledDiv>
           {error && <ErrorText>{error}</ErrorText>}
           <StyledArticle>
@@ -109,6 +121,23 @@ const StyledDiv = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
+`;
+
+const PasswordContainer = styled.div`
+  display: flex;
+  align-items: center;
+  position: relative;
+`;
+
+const EyeIcon = styled.div`
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
 `;
 
 const StyledArticle = styled.article`

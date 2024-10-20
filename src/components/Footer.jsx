@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { Input } from "./UI/Input";
 import { Icons } from "../assets/index";
 import { Button } from "./UI/Button";
+import { AuthContext } from "../context/LoginContext";
 
 export const Footer = () => {
+  const { setIsLoggedIn } = useContext(AuthContext);
+
   return (
     <StyledFooter>
       <StyledNewsletter>
@@ -29,7 +32,9 @@ export const Footer = () => {
       <StyledNewsletter>
         <StyledLink href="#">Shop</StyledLink>
         <StyledDivs>
-          <StyledLink href="#">About</StyledLink>
+          <StyledLink href="#" onClick={() => setIsLoggedIn("about")}>
+            About
+          </StyledLink>
           <StyledLink href="#">Product</StyledLink>
           <StyledLink href="#">Reviews</StyledLink>
           <StyledLink href="#">Contact</StyledLink>

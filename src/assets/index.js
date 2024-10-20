@@ -10,7 +10,7 @@ import Bag from "../assets/icon/bag.svg?react";
 import Vegan from "../assets/icon/vegans.svg?react";
 import Bitcoin from "../assets/icon/bitcoin.svg?react";
 import BlackHeart from "../assets/icon/black.svg?react";
-// import BlackHeart from './icon/black.svg?react'
+import LogoSinsay from './icon/logo-sinsay.svg?react'
 
 export const Icons = {
   Korzina,
@@ -20,6 +20,7 @@ export const Icons = {
   Facebook,
   Heart,
   Search,
+  LogoSinsay,
   People,
   Bag,
   Vegan,
